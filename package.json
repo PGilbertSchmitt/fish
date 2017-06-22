@@ -21,7 +21,9 @@
     "lib": "lib",
     "test": "test"
   },
-  "scripts": {},
+  "scripts": {
+    "webpack": "webpack --config webpack.config.dev.js --watch"
+  },
   "author": "PGilbertSchmitt@gmail.com",
   "license": "MIT"
 }
