@@ -16,3 +16,6 @@
 
  /* Vendor */
 @import "vendor/bulma.scss";
+
+ /* Base */
+@import "base/fonts.scss";
