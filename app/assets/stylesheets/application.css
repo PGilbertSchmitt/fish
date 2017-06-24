@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Vendor */
+@import "vendor/normalize.scss";
+@import "vendor/skeleton.scss";
