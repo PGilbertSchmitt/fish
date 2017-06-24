@@ -15,5 +15,4 @@
  */
 
  /* Vendor */
-@import "vendor/normalize.scss";
-@import "vendor/skeleton.scss";
+@import "vendor/bulma.scss";
