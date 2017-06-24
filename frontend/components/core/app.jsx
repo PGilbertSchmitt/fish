@@ -1,12 +1,11 @@
 import React from 'react';
 
 import Main from './main';
+import Header from '../nav/header'
 
 const App = ({ children }) => (
     <div>
-        <h1>Header</h1>
-        <p>If you see this, then React is working (probably)</p>
-
+        <Header />
         <Main />
     </div>
 )
