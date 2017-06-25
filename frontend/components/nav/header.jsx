@@ -4,13 +4,19 @@ import { Link } from 'react-router-dom';
 const Header = props => (
     <header className="header">
         <nav className="nav-bar">
-            <div className="nav-left">
-                <Link to="/" id="logo">P. Gilbert Schmitt</Link>
-            </div>
+            <Link to="/" className="logo">P. Gilbert Schmitt</Link>
 
-            <div className="nav-right">
-                <Link to="/portfolio">Portfolio</Link>
-            </div>
+            <ul className="nav-menu">
+                <li className="header-link">
+                    <Link to="/portfolio">Portfolio</Link>
+                </li>
+                <li className="header-link">
+                    <Link to="/">Blog</Link>
+                </li>
+                <li className="header-link">
+                    <Link to="/">Contact</Link>
+                </li>
+            </ul>
         </nav>
     </header>
 );
