@@ -15,7 +15,8 @@
  */
 
  /* Vendor */
-@import "vendor/bulma.scss";
+@import "vendor/normalize.css";
+@import "vendor/skeleton.css";
 
  /* Base */
 @import "base/fonts.scss";

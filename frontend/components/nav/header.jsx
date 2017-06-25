@@ -2,20 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = props => (
-    <header className="u-full-width">
-        <div className="header-bar">
-            <Link to="/">
-                <div className="header-link">P. Gilbert Schmitt</div>
-            </Link>
+    <header className="header">
+        <nav className="nav-bar">
+            <div className="nav-left">
+                <Link to="/" id="logo">P. Gilbert Schmitt</Link>
+            </div>
 
-            <nav className="header-nav">
-                <ul className="nav-list">
-                    <Link to="/portfolio">
-                        <li className="nav-item">Portfolio</li>
-                    </Link>
-                </ul>
-            </nav>
-        </div>
+            <div className="nav-right">
+                <Link to="/portfolio">Portfolio</Link>
+            </div>
+        </nav>
     </header>
 );
 
