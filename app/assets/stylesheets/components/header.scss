@@ -57,16 +57,17 @@ header.header {
                 align-items: center;
                 margin-left: 10px;
                 margin-right: 10px;
+                text-decoration: none;
                 
-                a {
+                p {
                     font-size: 26px;
-                    text-decoration: none;
                     color: $white;
+                    margin: 0;
                 }
+            }
 
-                .active-link {
-                    color: $turquoise;
-                }
+            .header-link.active-link p {
+                color: $turquoise;
             }
 
             .header-link:hover {

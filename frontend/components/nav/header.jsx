@@ -10,12 +10,8 @@ const Header = props => (
             </Link>
 
             <ul className="nav-menu">
-                <li className="header-link">
-                    <NavLink to="/portfolio" activeClassName="active-link">Portfolio</NavLink>
-                </li>
-                <li className="header-link">
-                    <NavLink to="/blog" activeClassName="active-link">Blog</NavLink>
-                </li>
+                <NavLink to="/portfolio" className="header-link" activeClassName="active-link"><p>Portfolio</p></NavLink>
+                <NavLink to="/blog" className="header-link" activeClassName="active-link"><p>Blog</p></NavLink>
             </ul>
         </nav>
     </header>
