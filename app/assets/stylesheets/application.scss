@@ -20,6 +20,7 @@
  /* Base */
 @import "base/fonts.scss";
 @import "base/colors.scss";
+@import "base/layout.scss";
 
  /* Components */
-@import "components/header.scss";
+@import "components/*";
