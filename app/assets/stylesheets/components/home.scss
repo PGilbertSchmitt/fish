@@ -2,13 +2,34 @@ section.section {
     background-color: $grey;
     padding: 20px;
     box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 150px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
 
-    .content-title {
-        font-family: $sans-bold;
-        font-size: 30px;
+    .self {
+        background-color: blue;
+        width: 350px;
+        height: 400px;
+        float: left;
+        margin-right: 20px;
     }
 
-    .content-body {
-        font-family: $sans-serif;
+    .portal {
+        float: left;
+        width: 350px;
+
+        .portal-top {
+            background-color: red;
+            margin-bottom: 20px;
+            height: calc((100% - 20px) / 2);
+        }
+
+        .portal-bottom {
+            background-color: purple;
+            height: 90px;
+            height: calc((100% - 20px) / 2);
+        }
     }
 }
