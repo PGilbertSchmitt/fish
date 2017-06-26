@@ -1,0 +1,13 @@
+section.section {
+    background-color: $grey;
+    padding: 20px;
+
+    .content-title {
+        font-family: $sans-bold;
+        font-size: 30px;
+    }
+
+    .content-body {
+        font-family: $sans-serif;
+    }
+}
