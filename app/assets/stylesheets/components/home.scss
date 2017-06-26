@@ -1,6 +1,11 @@
+$column-width: 350px;
+$column-height: 500px;
+$item-spacing: 20px;
+
+
 section.section {
     background-color: $grey;
-    padding: 20px;
+    padding: $item-spacing;
     box-sizing: border-box;
     margin: 0 auto;
     margin-top: 150px;
@@ -10,26 +15,25 @@ section.section {
 
     .self {
         background-color: blue;
-        width: 350px;
+        width: $column-width;
         height: 400px;
         float: left;
-        margin-right: 20px;
+        margin-right: $item-spacing;
     }
 
     .portal {
         float: left;
-        width: 350px;
+        width: $column-width;
 
         .portal-top {
             background-color: red;
-            margin-bottom: 20px;
-            height: calc((100% - 20px) / 2);
+            margin-bottom: $item-spacing;
+            height: calc((100% - #{$item-spacing}) / 2);
         }
 
         .portal-bottom {
             background-color: purple;
-            height: 90px;
-            height: calc((100% - 20px) / 2);
+            height: calc((100% - #{$item-spacing}) / 2);
         }
     }
 }
