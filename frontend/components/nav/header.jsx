@@ -5,7 +5,7 @@ const Header = props => (
     <header className="header">
         <nav className="nav-bar page-width">
             <Link to="/" className="home-link">
-                <p className="logo">P. Gilbert Schmitt</p>
+                <p className="logo">Gilbert Schmitt</p>
                 <p className="sub-logo">Software Developer</p>
             </Link>
 
