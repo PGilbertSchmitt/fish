@@ -1,23 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = props => (
     <header className="header">
         <nav className="nav-bar page-width">
             <Link to="/" className="home-link">
-                <p className="logo">P Gilbert Schmitt</p>
+                <p className="logo">P. Gilbert Schmitt</p>
                 <p className="sub-logo">Software Developer</p>
             </Link>
 
             <ul className="nav-menu">
                 <li className="header-link">
-                    <Link to="/portfolio">Portfolio</Link>
+                    <NavLink to="/portfolio" activeClassName="active-link">Portfolio</NavLink>
                 </li>
                 <li className="header-link">
-                    <Link to="/">Blog</Link>
+                    <NavLink to="/blog" activeClassName="active-link">Blog</NavLink>
                 </li>
                 <li className="header-link">
-                    <Link to="/">Contact</Link>
+                    <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
                 </li>
             </ul>
         </nav>

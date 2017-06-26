@@ -1,6 +1,7 @@
 section.section {
     background-color: $grey;
     padding: 20px;
+    box-sizing: border-box;
 
     .content-title {
         font-family: $sans-bold;

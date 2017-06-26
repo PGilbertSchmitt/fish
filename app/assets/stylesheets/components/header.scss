@@ -1,8 +1,11 @@
 header.header {
-    background-color: $black;
+    background-color: $blue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 
     .nav-bar {
-        height: 60px;
+        height: 100px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -13,18 +16,21 @@ header.header {
 
             .logo {
                 font-family: $logo;
-                font-size: 28px;
-                color: $light-grey;
+                font-size: 44px;
+                color: $white;
                 margin: 0;
                 position: relative;
                 top: 3px;
             }
 
             .sub-logo {
-                color: $light-grey;
+                font-size: 20px;
+                color: $white;
                 margin: 0;
+                width: 100%;
+                text-align: right;
                 position: relative;
-                bottom: 5px;
+                bottom: 7px;
             }
         }
 
@@ -53,18 +59,18 @@ header.header {
                 margin-right: 10px;
                 
                 a {
-                    font-size: 20px;
+                    font-size: 26px;
                     text-decoration: none;
-                    color: $grey;
+                    color: $white;
                 }
 
-                a:hover {
-                    color: $light-grey;
+                .active-link {
+                    color: $turquoise;
                 }
             }
 
             .header-link:hover {
-                border-bottom: 3px solid red;
+                border-bottom: 5px solid $turquoise;
             }
         }
     }
