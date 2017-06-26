@@ -16,9 +16,6 @@ const Header = props => (
                 <li className="header-link">
                     <NavLink to="/blog" activeClassName="active-link">Blog</NavLink>
                 </li>
-                <li className="header-link">
-                    <NavLink to="/contact" activeClassName="active-link">Contact</NavLink>
-                </li>
             </ul>
         </nav>
     </header>
