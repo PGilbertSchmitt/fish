@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = (props) => (
     <section className="section">
         <div className="self">
-            <img className="self-image" src="face_circle.gif" />
+            <img className="self-image" src="body_circle.gif" />
         </div>
 
         <div className="portal">

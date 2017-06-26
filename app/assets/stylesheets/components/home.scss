@@ -1,42 +1,47 @@
-$column-width: 450px;
-$column-height: 800px;
+$column-width-left: 350px;
+$column-width-right: 450px;
+$column-height: 700px;
 $item-spacing: 20px;
 
 
 section.section {
-    background-color: $grey;
-    padding: $item-spacing;
+    font-family: $sans-serif;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 50px;
     width: fit-content;
     display: flex;
     justify-content: space-between;
 
     .self {
-        background-color: blue;
-        width: $column-width;
+        width: $column-width-left;
         height: $column-height;
         float: left;
+        background-color: $grey;
         margin-right: $item-spacing;
+        border-top-left-radius: calc(#{$column-width-left} / 2);
+        border-top-right-radius: calc(#{$column-width-left} / 2);
 
         .self-image {
+            box-sizing: border-box;
+            border-radius: 100%;
             width: 100%;
+            border: 1px solid black;
         }
     }
 
     .portal {
         float: left;
-        width: $column-width;
+        width: $column-width-right;
 
         .portal-top {
-            background-color: red;
             margin-bottom: $item-spacing;
+            background-color: $grey;
             height: calc((100% - #{$item-spacing}) / 2);
         }
 
         .portal-bottom {
-            background-color: purple;
+            background-color: $grey;
             height: calc((100% - #{$item-spacing}) / 2);
         }
     }
