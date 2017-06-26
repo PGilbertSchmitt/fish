@@ -2,23 +2,38 @@ header.header {
     background-color: $black;
 
     .nav-bar {
-        width: 1120px;
         height: 60px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .logo {
-            font-family: $logo;
-            font-size: 28px;
+        .home-link {
             text-decoration: none;
-            color: $light-grey;
+
+            .logo {
+                font-family: $logo;
+                font-size: 28px;
+                color: $light-grey;
+                margin: 0;
+                position: relative;
+                top: 3px;
+            }
+
+            .sub-logo {
+                color: $light-grey;
+                margin: 0;
+                position: relative;
+                bottom: 5px;
+            }
         }
 
-        .logo:hover {
-            color: $grey;
+        .home-link:hover {
+            .logo, .sub-logo {
+                color: $grey;
+            } 
         }
+
 
         .nav-menu {
             display: flex;

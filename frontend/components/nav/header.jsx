@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Header = props => (
     <header className="header">
-        <nav className="nav-bar">
-            <Link to="/" className="logo">P. Gilbert Schmitt</Link>
+        <nav className="nav-bar page-width">
+            <Link to="/" className="home-link">
+                <p className="logo">P Gilbert Schmitt</p>
+                <p className="sub-logo">Software Developer</p>
+            </Link>
 
             <ul className="nav-menu">
                 <li className="header-link">
