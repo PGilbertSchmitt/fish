@@ -1,5 +1,5 @@
-$column-width: 350px;
-$column-height: 500px;
+$column-width: 450px;
+$column-height: 800px;
 $item-spacing: 20px;
 
 
@@ -16,9 +16,13 @@ section.section {
     .self {
         background-color: blue;
         width: $column-width;
-        height: 400px;
+        height: $column-height;
         float: left;
         margin-right: $item-spacing;
+
+        .self-image {
+            width: 100%;
+        }
     }
 
     .portal {
