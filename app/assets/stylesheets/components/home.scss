@@ -8,14 +8,15 @@ section.section {
     font-family: $sans-serif;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 50px;
     width: fit-content;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
+    
 
     .self {
         width: $column-width-left;
-        height: $column-height;
+        height: fit-content;
         float: left;
         background-color: $grey;
         margin-right: $item-spacing;
@@ -27,6 +28,18 @@ section.section {
             border-radius: 100%;
             width: 100%;
             border: 1px solid black;
+        }
+
+        .about {
+            padding: 30px;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
