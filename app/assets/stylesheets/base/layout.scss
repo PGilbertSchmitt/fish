@@ -6,3 +6,17 @@ body {
     width: 820px;
     margin: 0 auto;
 }
+
+.external-link {
+    cursor: pointer;
+    color: $green;
+    font-family: $sans-bold;
+
+    .fa {
+        color: $navy;
+    }
+}
+
+.external-link:hover {
+    color: $navy;
+}
