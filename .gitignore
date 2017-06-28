@@ -18,5 +18,6 @@
 
 # Precompiled assets
 /app/assets/javascripts/bundle.js*
+/public/assets
 
 .byebug_history
