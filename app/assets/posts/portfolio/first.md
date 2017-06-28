@@ -3,4 +3,6 @@
 ## There won't be much here
 Just a bunch of nothing, really
 
-<p>Here's an attempt at some <em>EXTREME</em> inline HTML</p>
+<span>Here's an attempt at some <em>EXTREME</em> inline HTML</span>
+
+<canvas id="md-canvas"></canvas>
