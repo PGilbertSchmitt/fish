@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Project.create!([
+    {
+        title:  "First project",
+        desc:   "This is the first project. It is a standin for a tangible project.",
+        post_url:   "posts/portfolio/first.md",
+        github_url: "PGilbertSchmitt/gogol",
+        live_url:   "https://pgilbertschmitt.github.io/gogol/"
+    },
+    {
+        title: "Second project",
+        desc:   "This is the second project. It isn't all that special, really...",
+        post_url:   "posts/portfolio/second.md"
+    }
+])
