@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 
-const currentProjectReducer = (state = {}, action) => {
+const projectPageReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState = merge({}, state);
 
@@ -10,4 +10,4 @@ const currentProjectReducer = (state = {}, action) => {
     }
 }
 
-export default currentProjectReducer;
+export default projectPageReducer;
