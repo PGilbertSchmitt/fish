@@ -1,24 +1,45 @@
 header.header {
-    background-color: $black;
+    background-color: $blue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 
     .nav-bar {
-        width: 1120px;
-        height: 60px;
+        height: 100px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .logo {
-            font-family: $logo;
-            font-size: 28px;
+        .home-link {
             text-decoration: none;
-            color: $light-grey;
+
+            .logo {
+                font-family: $logo;
+                font-size: 44px;
+                color: $white;
+                margin: 0;
+                position: relative;
+                top: 3px;
+            }
+
+            .sub-logo {
+                font-size: 20px;
+                color: $white;
+                margin: 0;
+                width: 100%;
+                text-align: right;
+                position: relative;
+                bottom: 7px;
+            }
         }
 
-        .logo:hover {
-            color: $grey;
+        .home-link:hover {
+            .logo, .sub-logo {
+                color: $grey;
+            } 
         }
+
 
         .nav-menu {
             display: flex;
@@ -36,20 +57,21 @@ header.header {
                 align-items: center;
                 margin-left: 10px;
                 margin-right: 10px;
+                text-decoration: none;
                 
-                a {
-                    font-size: 20px;
-                    text-decoration: none;
-                    color: $grey;
-                }
-
-                a:hover {
-                    color: $light-grey;
+                p {
+                    font-size: 26px;
+                    color: $white;
+                    margin: 0;
                 }
             }
 
+            .header-link.active-link p {
+                color: $turquoise;
+            }
+
             .header-link:hover {
-                border-bottom: 3px solid red;
+                border-bottom: 5px solid $turquoise;
             }
         }
     }
