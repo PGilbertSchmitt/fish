@@ -10,6 +10,7 @@
 #  live_url   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  slug       :string           not null
 #
 
 class Project < ApplicationRecord
@@ -17,6 +18,13 @@ class Project < ApplicationRecord
         :title,
         :desc,
         :post_url,
+        :slug,
         presence: true
+    )
+
+    validates(
+        :title,
+        :slug,
+        uniqueness: true
     )
 end
