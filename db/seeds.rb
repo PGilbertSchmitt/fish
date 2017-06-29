@@ -8,17 +8,17 @@
 
 Project.create!([
     {
-        title:  "First project",
-        desc:   "This is the first project. It is a standin for a tangible project.",
-        post_url:   "posts/portfolio/first.md",
+        title:      "First project",
+        desc:       "This is the first project. It is a standin for a tangible project.",
+        post_url:   "portfolio/first.md",
         github_url: "PGilbertSchmitt/gogol",
         live_url:   "https://pgilbertschmitt.github.io/gogol/",
-        slug: "first-project"
+        slug:       "first-project"
     },
     {
-        title: "Second project",
-        desc:   "This is the second project. It isn't all that special, really...",
-        post_url:   "posts/portfolio/second.md",
-        slug: "second-project"
+        title:      "Second project",
+        desc:       "This is the second project. It isn't all that special, really...",
+        post_url:   "portfolio/second.md",
+        slug:       "second-project"
     }
 ])
