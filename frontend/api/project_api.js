@@ -3,7 +3,7 @@ export const fetchProjects = () => (
         .then(res => (res.json()))
 );
 
-export const getProject = title => (
-    fetch(`/api/projects/${title}`)
+export const getProject = slug => (
+    fetch(`/api/projects/${slug}`)
         .then(res => (res.json()))
 );

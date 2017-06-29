@@ -20,7 +20,7 @@ export const fetchProjects = () => dispatch => (
         .then(({ projects }) => dispatch(receiveProjects(projects)))
 );
 
-export const getProject = title => dispatch => (
-    ProjectAPI.fetchProjects(title)
+export const getProject = slug => dispatch => (
+    ProjectAPI.fetchProjects(slug)
         .then(({ project }) => dispatch(receiveProject(project)))
 );

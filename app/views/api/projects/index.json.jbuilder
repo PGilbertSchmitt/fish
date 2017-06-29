@@ -3,5 +3,6 @@ json.array! @projects do |project|
                   :title,
                   :desc,
                   :post_url,
-                  :created_at
+                  :created_at,
+                  :slug
 end

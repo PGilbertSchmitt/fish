@@ -4,9 +4,9 @@ class Api::ProjectsController < ApplicationController
     end
     
     def show
-        @project = Project.find_by title: params[:title]
+        @project = Project.find_by slug: params[:slug]
         if @project.nil?
-            render json: {error: "No such project #{params[:title]}"}, status: 	:unprocessable_entity
+            render json: {error: "No such project at url projects/#{params[:slug]}"}, status: 	:unprocessable_entity
         else
             post_path = "public/#{ActionController::Base.helpers.asset_path(@project.post_url)}"
             post_raw_md = File.open(post_path) { |io| io.read }
