@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import ProjectIndex from '../content/projects/project_index_container.js';
-import ProjectShow from '../content/projects/project_show';
+import ProjectIndex from '../content/projects/project_index_container';
+import ProjectShow from '../content/projects/project_show_container';
 
 const Portfolio = (props) => (
     <Switch>
