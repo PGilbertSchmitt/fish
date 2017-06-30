@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 import ProjectIndexItem from './project_index_container.js';
 
 class ProjectIndex extends Component {
-    constructer(props) {
+    constructor(props) {
         super(props);
     }
 
     render() {
-        <div className="project-index">
-
-        </div>
+        return (
+            <div className="project-index">
+                This is a project
+            </div>
+        );
     }
 }
 
