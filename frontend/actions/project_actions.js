@@ -17,10 +17,10 @@ const receiveProject = project => ({
 
 export const fetchProjects = () => dispatch => (
     ProjectAPI.fetchProjects()
-        .then(({ projects }) => dispatch(receiveProjects(projects)))
+        .then(projects => dispatch(receiveProjects(projects)))
 );
 
 export const getProject = slug => dispatch => (
     ProjectAPI.fetchProjects(slug)
-        .then(({ project }) => dispatch(receiveProject(project)))
+        .then(project => dispatch(receiveProject(project)))
 );
