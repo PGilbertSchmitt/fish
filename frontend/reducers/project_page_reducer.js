@@ -1,10 +1,11 @@
-import { merge } from 'lodash';
+import { RECEIVE_PROJECT } from '../actions/project_actions';
 
 const projectPageReducer = (state = {}, action) => {
     Object.freeze(state);
-    let newState = merge({}, state);
 
     switch (action.type) {
+        case RECEIVE_PROJECT:
+            return action.project;
         default:
             return state;
     }
