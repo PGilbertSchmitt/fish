@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const image_link = "https://i.imgbox.com/8ybfLGVD.gif";
+
 const Home = (props) => (
     <section className="section">
         <div className="self">
-            <img className="self-image" src="images/body_circle.gif" />
+            <img className="self-image" src={image_link} />
 
             <div className="about">
                 <p>
