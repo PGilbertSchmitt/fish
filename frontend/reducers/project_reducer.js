@@ -1,6 +1,6 @@
 import { RECEIVE_PROJECTS } from '../actions/project_actions';
 
-const projectReducer = (state = {}, action) => {
+const projectReducer = (state = [], action) => {
     Object.freeze(state);
 
     switch (action.type) {
