@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import ProjectIndexItem from './project_index_container.js';
-import { imgSrc } from '../../../util/util.js';
+import ProjectIndexItem from './project_index_item';
 
 class ProjectIndex extends Component {
     constructor(props) {
@@ -16,12 +15,8 @@ class ProjectIndex extends Component {
     }
 
     renderItems(projects) {
-        // console.log(this.props.projects);
         return projects.map((project, idx) => (
-            <div>
-                <p>{project.title}</p>
-                <img src={imgSrc(project.img_url)} />
-            </div>
+            <ProjectIndexItem project={project} key={idx} />
         ));
     }
 
