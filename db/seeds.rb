@@ -6,12 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Project.destroy_all
+
 Project.create!([
     {
         title:      "Gogol",
         desc:       "Configurable Game of Life",
         post_url:   "gogol.md",
-        github_url: "pgilbertschmitt/gogol",
+        github_url: "PGilbertSchmitt/gogol",
         live_url:   "https://pgilbertschmitt.github.io/gogol/",
         slug:       "gogol",
         img_url:    "MNQO9VSK"
@@ -24,5 +26,14 @@ Project.create!([
         live_url:   "https://marketplace.visualstudio.com/items?itemName=tootone.org-mode",
         slug:       "vscode-org-mode",
         img_url:    "Uy0lyzDm"
+    },
+    {
+        title:      "Project Ember",
+        desc:       "Interactive community experience by SF-based artist Jason Rasmussen",
+        post_url:   "ember.md",
+        github_url: "PGilbertSchmitt/Ember-v3-Prototype",
+        live_url:   "http://overzero.org/",
+        slug:       "project-ember",
+        img_url:    "DxhI0UY3"
     }
 ])
