@@ -16,7 +16,8 @@ Project.create!([
         github_url: "PGilbertSchmitt/gogol",
         live_url:   "https://pgilbertschmitt.github.io/gogol/",
         slug:       "gogol",
-        img_url:    "MNQO9VSK"
+        img_url:    "MNQO9VSK",
+        stack:      "HTML/CSS, JavaScript, React/Redux"
     },
     {
         title:      "VSCode Org Mode",
@@ -25,7 +26,8 @@ Project.create!([
         github_url: "jsonreeder/vscode-org-mode",
         live_url:   "https://marketplace.visualstudio.com/items?itemName=tootone.org-mode",
         slug:       "vscode-org-mode",
-        img_url:    "Uy0lyzDm"
+        img_url:    "Uy0lyzDm",
+        stack:      "TypeScript"
     },
     {
         title:      "Project Ember",
@@ -34,6 +36,7 @@ Project.create!([
         github_url: "PGilbertSchmitt/Ember-v3-Prototype",
         live_url:   "http://overzero.org/",
         slug:       "project-ember",
-        img_url:    "DxhI0UY3"
+        img_url:    "DxhI0UY3",
+        stack:      "C++, Arduino"
     }
 ])

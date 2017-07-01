@@ -3,5 +3,6 @@ json.array! @projects do |project|
                   :title,
                   :desc,
                   :slug,
-                  :img_url
+                  :img_url,
+                  :stack
 end
