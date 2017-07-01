@@ -10,6 +10,6 @@ const App = ({ children }) => (
         <Main />
         <Spacer />
     </div>
-)
+);
 
 export default App;

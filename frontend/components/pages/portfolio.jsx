@@ -6,8 +6,8 @@ import ProjectShow from '../content/projects/project_show_container';
 
 const Portfolio = (props) => (
     <Switch>
-        <Route exact path='/portfolio' component={ProjectIndex} />
-        <Route path='/portfolio/:slug' component={ProjectShow} />
+        <Route exact path="/portfolio" component={ProjectIndex} />
+        <Route path="/portfolio/:slug" component={ProjectShow} />
     </Switch>
 );
 

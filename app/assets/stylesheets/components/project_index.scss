@@ -1,7 +1,8 @@
 .project-index {
-    width: 100%;
     padding-top: 90px;
     text-align: center;
+    width: 700px;
+    margin: 0 auto;
 
     .page-title {
         margin-bottom: 40px;
@@ -13,11 +14,10 @@
     }
     
     .project-listing {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         height: 100px;
-        width: 700px;
-        margin: 0 auto;
         background-color: $grey;
         margin-bottom: 20px;
         padding: 20px;

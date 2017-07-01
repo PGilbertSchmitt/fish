@@ -25,10 +25,9 @@ class ProjectShow extends Component {
     }
 
     render() {
-
         return (
             <div id="project-target" className="project-target"></div>
-        )
+        );
     }
 }
 

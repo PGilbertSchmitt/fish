@@ -7,8 +7,8 @@ import Portfolio from '../pages/portfolio';
 const Main = (props) => (
     <main>
         <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/portfolio' component={Portfolio} />
+            <Route exact path="/" component={Home} />
+            <Route path="/portfolio" component={Portfolio} />
         </Switch>
     </main>
 );

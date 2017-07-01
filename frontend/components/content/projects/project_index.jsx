@@ -23,7 +23,7 @@ class ProjectIndex extends Component {
     render() {
         return (
             <div className="project-index">
-                <h1 className="page-title">Projects I'm proud of</h1>
+                <h1 className="page-title">My babies</h1>
                 {this.renderItems(this.props.projects)}
             </div>
         );
