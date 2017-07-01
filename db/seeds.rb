@@ -15,7 +15,7 @@ Project.create!([
         post_url:   "gogol.md",
         github_url: "PGilbertSchmitt/gogol",
         live_url:   "https://pgilbertschmitt.github.io/gogol/",
-        slug:       "gogol",
+        slug:       "gogol.md",
         img_url:    "MNQO9VSK",
         stack:      "HTML/CSS, JavaScript, React/Redux"
     },
