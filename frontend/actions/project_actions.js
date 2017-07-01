@@ -21,6 +21,6 @@ export const fetchProjects = () => dispatch => (
 );
 
 export const getProject = slug => dispatch => (
-    ProjectAPI.fetchProjects(slug)
+    ProjectAPI.getProject(slug)
         .then(project => dispatch(receiveProject(project)))
 );
