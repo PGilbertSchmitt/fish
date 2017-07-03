@@ -14,7 +14,6 @@ class ProjectShow extends Component {
 
     render() {
         let project = this.props.project;
-        console.log(project);
 
         if (project) {
             return (
