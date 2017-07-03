@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
 
+import { imgSrc } from '../../../util/util';
+
 class ProjectShow extends Component {
     constructor(props) {
         super(props);
-
-        this.replaceHTML = this.replaceHTML.bind(this);
     }
 
     componentDidMount() {
         let slug = this.props.match.params.slug;
         this.props.getProject(slug);
-    }
-
-    componentDidUpdate() {
-        // this.replaceHTML("project-target");
-    }
-
-    replaceHTML(id) {
-        let text = this.props.project;
-
-        document.getElementById(id).innerHTML = Boolean(this.props.project.project)
-            ? this.props.project.project
-            : `<div class="no-project">Could not find a project at portfolio/${this.props.match.params.slug}</div>`
     }
 
     render() {
@@ -37,6 +25,7 @@ class ProjectShow extends Component {
                         <br />
                         <a href={project.live_url} className="external-link"><i className="fa fa-external-link-square fa-fw"></i>&nbsp;&nbsp;Live page</a>
                     </p>
+                    <img className="" src={imgSrc(project.header_img_path)} />
                     <div className="project-target" dangerouslySetInnerHTML={{ __html: project.html }}></div>
                 </div>
             );

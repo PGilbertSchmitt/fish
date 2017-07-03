@@ -10,33 +10,36 @@ Project.destroy_all
 
 Project.create!([
     {
-        title:      "Gogol",
-        desc:       "Configurable Game of Life",
-        post_url:   "gogol.md",
-        github_url: "PGilbertSchmitt/gogol",
-        live_url:   "https://pgilbertschmitt.github.io/gogol/",
-        slug:       "gogol",
-        img_url:    "MNQO9VSK",
-        stack:      "HTML/CSS, JavaScript, React/Redux"
+        title:              "Gogol",
+        desc:               "Configurable Game of Life",
+        post_url:           "gogol.md",
+        github_url:         "PGilbertSchmitt/gogol",
+        live_url:           "https://pgilbertschmitt.github.io/gogol/",
+        slug:               "gogol",
+        stack:              "HTML/CSS, JavaScript, React/Redux",
+        thumbnail_path:     "MNQO9VSK",
+        header_img_path:    "g7mG1kGN"
     },
     {
-        title:      "VSCode Org Mode",
-        desc:       "Brings emacs org mode extension to Visual Studio Code",
-        post_url:   "orgmode.md",
-        github_url: "jsonreeder/vscode-org-mode",
-        live_url:   "https://marketplace.visualstudio.com/items?itemName=tootone.org-mode",
-        slug:       "vscode-org-mode",
-        img_url:    "Uy0lyzDm",
-        stack:      "TypeScript"
+        title:              "VSCode Org Mode",
+        desc:               "Brings emacs org mode extension to Visual Studio Code",
+        post_url:           "orgmode.md",
+        github_url:         "jsonreeder/vscode-org-mode",
+        live_url:           "https://marketplace.visualstudio.com/items?itemName=tootone.org-mode",
+        slug:               "vscode-org-mode",
+        stack:              "TypeScript",
+        thumbnail_path:     "Uy0lyzDm",
+        header_img_path:    "MNFGoNyB"
     },
     {
-        title:      "Project Ember",
-        desc:       "Interactive community experience by SF-based artist Jason Rasmussen",
-        post_url:   "ember.md",
-        github_url: "PGilbertSchmitt/Ember-v3-Prototype",
-        live_url:   "http://overzero.org/",
-        slug:       "project-ember",
-        img_url:    "DxhI0UY3",
-        stack:      "C++, Arduino"
+        title:              "Project Ember",
+        desc:               "Interactive community experience by SF-based artist Jason Rasmussen",
+        post_url:           "ember.md",
+        github_url:         "PGilbertSchmitt/Ember-v3-Prototype",
+        live_url:           "http://overzero.org/",
+        slug:               "project-ember",
+        stack:              "C++, Arduino",
+        thumbnail_path:     "DxhI0UY3",
+        header_img_path:    "CNFMvp5F"
     }
 ])
