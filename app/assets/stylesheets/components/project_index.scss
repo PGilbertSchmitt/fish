@@ -1,0 +1,53 @@
+.project-index {
+    padding-top: 90px;
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+
+    .page-title {
+        margin-bottom: 40px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $navy;
+    }
+    
+    .project-listing {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        background-color: $grey;
+        margin-bottom: 20px;
+        padding: 20px;
+
+        .index-img {
+            width: 100px;
+            height: 100%;
+        }
+
+        .index-text-box {
+            width: 600px;
+            height: 100%;
+            padding-left: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            h5 {
+                font-size: 2rem;
+                margin-bottom: 3px;
+            }
+
+            p {
+                margin-top: 8px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .project-listing:hover {
+        background-color: $green;
+    }
+}

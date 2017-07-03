@@ -3,12 +3,12 @@ import * as ProjectAPI from '../api/project_api';
 export const RECEIVE_PROJECTS = "RECEIVE_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 
-export const receiveProjects = projects => ({
+const receiveProjects = projects => ({
     type: RECEIVE_PROJECTS,
     projects
 });
 
-export const receiveProject = project => ({
+const receiveProject = project => ({
     type: RECEIVE_PROJECT,
     project
 });
@@ -17,10 +17,10 @@ export const receiveProject = project => ({
 
 export const fetchProjects = () => dispatch => (
     ProjectAPI.fetchProjects()
-        .then(({ projects }) => dispatch(receiveProjects(projects)))
+        .then(projects => dispatch(receiveProjects(projects)))
 );
 
 export const getProject = slug => dispatch => (
-    ProjectAPI.fetchProjects(slug)
-        .then(({ project }) => dispatch(receiveProject(project)))
+    ProjectAPI.getProject(slug)
+        .then(project => dispatch(receiveProject(project)))
 );

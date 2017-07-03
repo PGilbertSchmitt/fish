@@ -6,4 +6,4 @@ import store from './store/store';
 
 document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(<Root store={store} />, document.getElementById("root"));
-})
+});

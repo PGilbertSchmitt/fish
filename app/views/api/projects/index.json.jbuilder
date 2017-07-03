@@ -2,7 +2,7 @@ json.array! @projects do |project|
     json.extract! project,
                   :title,
                   :desc,
-                  :post_url,
-                  :created_at,
-                  :slug
+                  :slug,
+                  :stack,
+                  :thumbnail_path
 end
