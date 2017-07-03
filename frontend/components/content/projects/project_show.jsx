@@ -13,11 +13,11 @@ class ProjectShow extends Component {
     }
 
     componentDidUpdate() {
-        this.replaceHTML("project-target");
+        // this.replaceHTML("project-target");
     }
 
     replaceHTML(id) {
-        let text = this.props.project.project;
+        let text = this.props.project;
 
         document.getElementById(id).innerHTML = Boolean(this.props.project.project)
             ? this.props.project.project
@@ -25,9 +25,26 @@ class ProjectShow extends Component {
     }
 
     render() {
-        return (
-            <div id="project-target" className="project-target"></div>
-        );
+        let project = this.props.project;
+        console.log(project);
+
+        if (project) {
+            return (
+                <div className="project-page">
+                    <h1>{project.title}</h1>
+                    <p>
+                        <a href={`https://github.com/${project.github_url}`} className="external-link"><i className="fa fa-github-square fa-fw"></i>&nbsp;&nbsp;Github repo</a>
+                        <br />
+                        <a href={project.live_url} className="external-link"><i className="fa fa-external-link-square fa-fw"></i>&nbsp;&nbsp;Live page</a>
+                    </p>
+                    <div className="project-target" dangerouslySetInnerHTML={{ __html: project.html }}></div>
+                </div>
+            );
+        } else {
+            return (
+                <div className="no-project">Could not find a project at portfolio/${this.props.match.params.slug}</div>
+            );
+        }
     }
 }
 
