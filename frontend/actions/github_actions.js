@@ -1,4 +1,4 @@
-import { filter, sortBy, first, last } from 'lodash';
+import * as _ from 'lodash';
 
 import * as GithubApi from '../api/github_api';
 
@@ -10,28 +10,40 @@ const receiveCommit = commit => ({
 });
 
 export const fetchCommit = () => dispatch => {
+    let lastEvent = {};
+
     GithubApi.fetchEvents()
         .then(events => {
-            let lastEvent = latestEvent(events);
+            lastEvent = latestEvent(events);
             let repo = lastEvent.repo.name;
 
             return GithubApi.fetchCommits(repo);
         }).then(commits => {
-            let commit = first(commits);
-            dispatch(receiveCommit(commit));
+            let commit = _.first(commits);
+            dispatch(receiveCommit(commitInfo(commit, lastEvent)));
         });
 };
 
 const latestEvent = events => {
-    let pushEvents = filter(events, event => (
+    let pushEvents = _.filter(events, event => (
         event.type === "PushEvent"
     ));
 
-    let sortedEvents = sortBy(pushEvents, event => (
+    let sortedEvents = _.sortBy(pushEvents, event => (
         event.created_at
     ));
 
-    return last(sortedEvents);
+    return _.last(sortedEvents);
 }
+
+const commitInfo = (commit, event) => {
+    let message = _.first(_.split(commit.commit.message, /\n+/));
+
+    return {
+        message: message,
+        repo: event.repo.name,
+        timeStamp: event.created_at
+    }
+};
 
 window.fetchCommit = fetchCommit;
