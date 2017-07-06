@@ -6,7 +6,7 @@ class GithubStatistics extends Component {
     }
 
     componentDidMount() {
-        console.log("Call for data here");
+        this.props.fetchCommit();
     }
 
     render() {
@@ -15,3 +15,5 @@ class GithubStatistics extends Component {
         );
     }
 }
+
+export default GithubStatistics;
