@@ -6,7 +6,7 @@ class WakatimeStatistics extends Component {
     }
 
     componentDidMount() {
-        console.log("Call for data here");
+        this.props.fetchStats();
     }
 
     render() {
@@ -15,3 +15,5 @@ class WakatimeStatistics extends Component {
         );
     }
 }
+
+export default WakatimeStatistics;
