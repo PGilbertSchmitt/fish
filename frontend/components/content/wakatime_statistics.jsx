@@ -6,7 +6,7 @@ class WakatimeStatistics extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchStats();
+        this.props.fetchActivity();
     }
 
     render() {

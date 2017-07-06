@@ -1,15 +1,15 @@
 import * as WakatimeAPI from '../api/wakatime_api';
 
-export const RECEIVE_WAKA_STATS = "RECEIVE_WAKA_STATS";
+export const RECEIVE_WAKA_ACTIVITY = "RECEIVE_WAKA_ACTIVITY";
 
-const receiveWakaStats = stats => ({
-    type: RECEIVE_WAKA_STATS,
-    stats
+const receiveActivity = activity => ({
+    type: RECEIVE_WAKA_ACTIVITY,
+    activity
 });
 
 /* THUNKER */
 
-export const fetchStats = () => dispatch => (
-    WakatimeAPI.fetchWakaStats()
-        .then(stats => dispatch(receiveWakaStats(stats)))
+export const fetchActivity = () => dispatch => (
+    WakatimeAPI.fetchActivity()
+        .then(activity => dispatch(receiveActivity(activity)))
 );

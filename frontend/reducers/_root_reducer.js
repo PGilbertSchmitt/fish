@@ -9,5 +9,5 @@ export default combineReducers({
     projects: projectReducer,
     project: projectPageReducer,
     commit: commitReducer,
-    wakaStats: wakatimeReducer
+    wakaActivity: wakatimeReducer
 });
