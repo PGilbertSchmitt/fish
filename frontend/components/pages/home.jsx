@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import WakatimeStatistics from '../content/wakatime_container';
+
 const image_link = "https://i.imgbox.com/8ybfLGVD.gif";
 
 const Home = (props) => (
@@ -27,7 +29,7 @@ const Home = (props) => (
 
         <div className="portal">
             <div className="portal-top">
-                i write my recipes here
+                <WakatimeStatistics />
             </div>
             <div className="portal-bottom">
                 one tiem i ate a friSBEE
