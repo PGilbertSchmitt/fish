@@ -80,6 +80,7 @@ class WakatimeStatistics extends Component {
                     margin={margin} >
 
                     <Tooltip
+                        cursor={{ fill: "#8FC2FF" }}
                         content={<CustomTooltip />} />
                     <Bar
                         type="monotone"
