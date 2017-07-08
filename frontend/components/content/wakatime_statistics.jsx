@@ -1,4 +1,20 @@
 import React, { Component } from 'react';
+import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+
+const CustomTooltip = (props) => {
+    if (props.active) {
+        if (props.payload && props.payload.length > 0) {
+            let data = props.payload[0].payload;
+            return (
+                <div className="tooltip">
+                    <p>{data.timeString} hr</p>
+                </div>
+            );
+        }
+
+    }
+    return null;
+};
 
 class WakatimeStatistics extends Component {
     constructor(props) {
@@ -14,7 +30,7 @@ class WakatimeStatistics extends Component {
     componentDidMount() {
         this.props.fetchActivity();
         let width = document.getElementById("chart-container").offsetWidth;
-        let height = document.getElementById("chart-container").offsetHeight;
+        let height = document.getElementById("chart-container").offsetHeight - 20;
 
         this.setState({ width, height });
     }
@@ -24,13 +40,13 @@ class WakatimeStatistics extends Component {
         data = data.map(point => {
             let hours = point.grand_total.hours;
             let minutes = point.grand_total.minutes;
-            let totalMinutes = minutes + (60 + hours);
+            let totalMinutes = minutes + (60 * hours);
 
-            let minuteString = `${hours}:${this.padMinutes(minutes)}`;
+            let timeString = `${hours}:${this.padMinutes(minutes)}`;
 
             return {
                 minutes: totalMinutes,
-                minuteString: minuteString,
+                timeString: timeString,
                 date: point.range.date.substring(5)
             }
         });
@@ -53,8 +69,32 @@ class WakatimeStatistics extends Component {
         let height = this.state.height;
         let data = this.state.data;
 
+        let margin = { top: 5, right: 5, left: 5, bottom: 5 };
+
         return (
-            <div className="wakatime-stats" id="chart-container">I typed today!</div>
+            <div className="wakatime-stats" id="chart-container">
+                <BarChart
+                    width={width}
+                    height={height}
+                    data={data}
+                    margin={margin} >
+
+                    <Tooltip
+                        content={<CustomTooltip />} />
+                    <Bar
+                        type="monotone"
+                        dataKey="minutes"
+                        fill="#2660A4" />
+                    <XAxis
+                        dataKey="date"
+                        tickLine={false}
+                        padding={{ left: 10, right: 10 }} />
+                    <YAxis
+                        unit="min"
+                        dataKey="minutes" />
+                </BarChart>
+                <h6>Minutes spent coding this week</h6>
+            </div>
         );
     }
 }
