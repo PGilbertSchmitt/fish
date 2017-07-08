@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { ComposedChart, Bar, Line, XAxis, YAxis, Tooltip } from 'recharts';
 
 const CustomTooltip = (props) => {
     if (props.active) {
@@ -73,7 +73,7 @@ class WakatimeStatistics extends Component {
 
         return (
             <div className="wakatime-stats" id="chart-container">
-                <BarChart
+                <ComposedChart
                     width={width}
                     height={height}
                     data={data}
@@ -86,6 +86,10 @@ class WakatimeStatistics extends Component {
                         type="monotone"
                         dataKey="minutes"
                         fill="#2660A4" />
+                    <Line
+                        type="monotone"
+                        dataKey="minutes"
+                        stroke="#19323C" />
                     <XAxis
                         dataKey="date"
                         tickLine={false}
@@ -93,7 +97,7 @@ class WakatimeStatistics extends Component {
                     <YAxis
                         unit="min"
                         dataKey="minutes" />
-                </BarChart>
+                </ComposedChart>
                 <h6>Minutes spent coding this week</h6>
             </div>
         );
