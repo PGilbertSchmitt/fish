@@ -1,5 +1,5 @@
 $column-width-left: 350px;
-$column-width-right: 450px;
+$column-width-right: 550px;
 $column-height: 700px;
 $item-spacing: 20px;
 
@@ -22,6 +22,7 @@ section.section {
         margin-right: $item-spacing;
         border-top-left-radius: calc(#{$column-width-left} / 2);
         border-top-right-radius: calc(#{$column-width-left} / 2);
+        border-bottom-left-radius: 20px;
 
         .self-image {
             box-sizing: border-box;
@@ -52,12 +53,18 @@ section.section {
         .portal-top {
             margin-bottom: $item-spacing;
             background-color: $grey;
+            box-sizing: border-box;
             height: calc((100% - #{$item-spacing}) / 2);
+            border-top-right-radius: 20px;
+            padding: 20px;
         }
 
         .portal-bottom {
             background-color: $grey;
+            box-sizing: border-box;
             height: calc((100% - #{$item-spacing}) / 2);
+            border-bottom-right-radius: 20px;
+            padding: 20px;
         }
     }
 }
