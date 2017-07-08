@@ -89,7 +89,8 @@ class WakatimeStatistics extends Component {
                     <Line
                         type="monotone"
                         dataKey="minutes"
-                        stroke="#19323C" />
+                        stroke="#19323C"
+                        strokeWidth={3} />
                     <XAxis
                         dataKey="date"
                         tickLine={false}
