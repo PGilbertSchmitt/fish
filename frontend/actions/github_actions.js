@@ -2,13 +2,13 @@ import * as _ from 'lodash';
 
 import * as GithubApi from '../api/github_api';
 
-export const RECEIVE_COMMIT = "RECEIVE_COMMIT";
+export const RECEIVE_COMMITS = "RECEIVE_COMMITS";
 
 const NUM_COMMITS = 4;
 
-const receiveCommit = commit => ({
-    type: RECEIVE_COMMIT,
-    commit
+const receiveCommits = commits => ({
+    type: RECEIVE_COMMITS,
+    commits
 });
 
 export const fetchCommits = () => dispatch => {
@@ -22,7 +22,7 @@ export const fetchCommits = () => dispatch => {
             return GithubApi.fetchCommits(repo);
         }).then(commits => {
             let lastCommits = latestCommits(commits, NUM_COMMITS);
-            dispatch(receiveCommit(commitInfo(lastCommits)));
+            dispatch(receiveCommits(commitInfo(lastCommits)));
         });
 };
 
