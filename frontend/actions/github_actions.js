@@ -4,7 +4,7 @@ import * as GithubApi from '../api/github_api';
 
 export const RECEIVE_COMMIT = "RECEIVE_COMMIT";
 
-const NUM_COMMITS = 3;
+const NUM_COMMITS = 4;
 
 const receiveCommit = commit => ({
     type: RECEIVE_COMMIT,
@@ -35,7 +35,6 @@ const latestEvent = events => {
         event.created_at
     ));
 
-    // console.log(sortedEvents);
     return _.last(sortedEvents);
 }
 
@@ -44,9 +43,14 @@ const latestCommits = (commits, num) => {
 }
 
 const commitInfo = commits => (
-    commits.map(commit => (
-        _.first(_.split(commit.commit.message, /\n+/))
-    ))
+    commits.map(commit => {
+        let [message, branch] = _.split(commit.commit.message, /\n+/);
+
+        return {
+            message: message,
+            merge: Boolean(branch)
+        }
+    })
 );
 
 window.fetchCommit = fetchCommit;
