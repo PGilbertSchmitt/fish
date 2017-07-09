@@ -1,6 +1,6 @@
 $column-width-left: 350px;
 $column-width-right: 550px;
-$column-height: 700px;
+$column-height: 600px;
 $item-spacing: 20px;
 
 
@@ -9,6 +9,7 @@ section.section {
     box-sizing: border-box;
     margin: 0 auto;
     width: fit-content;
+    height: $column-height;
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
@@ -16,7 +17,7 @@ section.section {
 
     .self {
         width: $column-width-left;
-        height: fit-content;
+        height: 100%;
         float: left;
         background-color: $grey;
         margin-right: $item-spacing;
