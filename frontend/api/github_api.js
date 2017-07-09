@@ -12,8 +12,14 @@ const options = {
 export const fetchEvents = () => {
     let url = "https://api.github.com/users/pgilbertschmitt/events";
 
-    return fetch(url, options)
-        .then(res => (res.json()));
+    return $.ajax({
+        type: 'GET',
+        url: url,
+        beforeSend: req => {
+            req.setRequestHeader("User-Agent", "PGilbertSchmitt");
+        },
+        dataType: 'jsonp'
+    })
 }
 
 export const fetchCommits = (repo) => {
@@ -29,3 +35,5 @@ window.ghlimit = () => {
         .then(res => (res.json()))
         .then(data => { console.log(data) });
 }
+
+window.fetchEvents = fetchEvents;

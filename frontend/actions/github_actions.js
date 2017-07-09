@@ -4,6 +4,8 @@ import * as GithubApi from '../api/github_api';
 
 export const RECEIVE_COMMIT = "RECEIVE_COMMIT";
 
+const NUM_COMMITS = 3;
+
 const receiveCommit = commit => ({
     type: RECEIVE_COMMIT,
     commit
@@ -14,13 +16,13 @@ export const fetchCommit = () => dispatch => {
 
     GithubApi.fetchEvents()
         .then(events => {
-            lastEvent = latestEvent(events);
+            lastEvent = latestEvent(events.data);
             let repo = lastEvent.repo.name;
 
             return GithubApi.fetchCommits(repo);
         }).then(commits => {
-            let commit = _.first(commits);
-            dispatch(receiveCommit(commitInfo(commit, lastEvent)));
+            let lastCommits = latestCommits(commits, NUM_COMMITS);
+            dispatch(receiveCommit(commitInfo(lastCommits)));
         });
 };
 
@@ -33,17 +35,18 @@ const latestEvent = events => {
         event.created_at
     ));
 
+    // console.log(sortedEvents);
     return _.last(sortedEvents);
 }
 
-const commitInfo = (commit, event) => {
-    let message = _.first(_.split(commit.commit.message, /\n+/));
+const latestCommits = (commits, num) => {
+    return _.take(commits, num);
+}
 
-    return {
-        message: message,
-        repo: event.repo.name,
-        timeStamp: event.created_at
-    }
-};
+const commitInfo = commits => (
+    commits.map(commit => (
+        _.first(_.split(commit.commit.message, /\n+/))
+    ))
+);
 
 window.fetchCommit = fetchCommit;
