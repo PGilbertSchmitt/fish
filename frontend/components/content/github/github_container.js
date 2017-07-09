@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import GithubStatistics from './github_statistics';
-import { fetchCommit } from '../../actions/github_actions';
+import { fetchCommit } from '../../../actions/wakatime_actions.js';
 
 const mapStateToProps = state => ({
     commit: state.commit

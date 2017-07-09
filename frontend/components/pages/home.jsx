@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import WakatimeStatistics from '../content/wakatime_container';
+import WakatimeStatistics from '../content/wakatime/wakatime_container';
 
 const image_link = "https://i.imgbox.com/8ybfLGVD.gif";
 
