@@ -11,7 +11,7 @@ const receiveCommit = commit => ({
     commit
 });
 
-export const fetchCommit = () => dispatch => {
+export const fetchCommits = () => dispatch => {
     let lastEvent = {};
 
     GithubApi.fetchEvents()
@@ -53,4 +53,4 @@ const commitInfo = commits => (
     })
 );
 
-window.fetchCommit = fetchCommit;
+window.fetchCommit = fetchCommits;
