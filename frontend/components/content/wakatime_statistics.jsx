@@ -29,8 +29,8 @@ class WakatimeStatistics extends Component {
 
     componentDidMount() {
         this.props.fetchActivity();
-        let width = document.getElementById("chart-container").offsetWidth;
-        let height = document.getElementById("chart-container").offsetHeight - 20;
+        let width = document.getElementById("portal-top").offsetWidth - 50;
+        let height = document.getElementById("portal-top").clientHeight - 60;
 
         this.setState({ width, height });
     }
@@ -69,7 +69,7 @@ class WakatimeStatistics extends Component {
         let height = this.state.height;
         let data = this.state.data;
 
-        let margin = { top: 5, right: 5, left: 5, bottom: 5 };
+        let margin = { top: 5, right: 20, bottom: 5 };
 
         return (
             <div className="wakatime-stats" id="chart-container">
