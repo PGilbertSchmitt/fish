@@ -24,14 +24,19 @@
             background-repeat: no-repeat;
         }
 
-        .gh-message {
+        .gh-info {
             display: inline-block;
             vertical-align: top;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-height: 48px;
             width: 480px;
+
+            .gh-message {
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 48px;
+            }
         }
+
     }
 }
 
