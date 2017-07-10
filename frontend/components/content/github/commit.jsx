@@ -12,6 +12,7 @@ const Commit = ({ commit: { message, merge, date, sha, url } }) => {
                 <p className="gh-message">{message}</p>
                 <p className="gh-message">Commit <a className="external-link" href={url}>{sha}</a> made {moment(date).fromNow()}</p>
             </div>
+            <hr />
         </div>
     );
 };

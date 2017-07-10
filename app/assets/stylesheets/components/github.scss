@@ -4,7 +4,7 @@
         text-align: center;
     }
 
-    .gh-item {
+    .gh-item {        
         .gh-icon {
             display: inline-block;
             width: 30px;
@@ -33,10 +33,18 @@
                 margin: 0;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-height: 48px;
+                white-space: nowrap;
             }
         }
 
+        hr {
+            margin: 3px 0;
+        }
+
+    }
+
+    .gh-item:last-child hr {
+        display: none;
     }
 }
 
