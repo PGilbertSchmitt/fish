@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Commit from './commit';
 
-const NUM_COMMITS = 7;
+const NUM_COMMITS = 6;
 
 class GithubStatistics extends Component {
     constructor(props) {
@@ -20,8 +20,8 @@ class GithubStatistics extends Component {
 
     render() {
         return (
-            <div>
-                <p>Yoman!</p>
+            <div className="github-stats">
+                <h5>Recent commits on Github</h5>
                 {this.renderCommits(this.props.commits)}
             </div>
         );

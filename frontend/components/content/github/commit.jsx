@@ -1,21 +1,15 @@
 import React from 'react';
 
 const Commit = ({ commit: { message, merge, date } }) => {
-    if (merge) {
-        return (
-            <div className="gh-item">
-                <i className="gh-icon gh-merge" />
-                <span>{message}</span>
-            </div>
-        );
-    } else {
-        return (
-            <div className="gh-item">
-                <i className="gh-icon gh-commit" />
-                <span>{message}</span>
-            </div>
-        );
-    }
+    let cssClasses = "gh-icon ";
+    cssClasses += merge ? "gh-merge" : "gh-commit";
+
+    return (
+        <div className="gh-item">
+            <i className={cssClasses} />
+            <span className="gh-message">{message}</span>
+        </div>
+    );
 };
 
 export default Commit;
