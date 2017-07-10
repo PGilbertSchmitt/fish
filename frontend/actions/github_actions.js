@@ -49,7 +49,8 @@ const commitInfo = commits => (
             message: message,
             merge: Boolean(branch),
             date: commit.commit.author.date,
-            sha: _.take(commit.sha, 7)
+            sha: _.take(commit.sha, 7),
+            url: commit.html_url
         }
     })
 );

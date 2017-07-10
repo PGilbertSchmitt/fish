@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Commit = ({ commit: { message, merge, date, sha } }) => {
+const Commit = ({ commit: { message, merge, date, sha, url } }) => {
     let cssClasses = "gh-icon ";
     cssClasses += merge ? "gh-merge" : "gh-commit";
 
@@ -9,7 +9,7 @@ const Commit = ({ commit: { message, merge, date, sha } }) => {
             <i className={cssClasses} />
             <div className="gh-info">
                 <p className="gh-message">{message}</p>
-                <p className="gh-message">Commit {sha} made 3 hours ago</p>
+                <p className="gh-message">Commit <a className="external-link" href={url}>{sha}</a> made 3 hours ago</p>
             </div>
         </div>
     );
