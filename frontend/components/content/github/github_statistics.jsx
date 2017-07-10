@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 
 import Commit from './commit';
 
+const NUM_COMMITS = 7;
+
 class GithubStatistics extends Component {
     constructor(props) {
         super(props);
     }
 
     componentDidMount() {
-        this.props.fetchCommits();
+        this.props.fetchCommits(NUM_COMMITS);
         console.log(this.props);
     }
 

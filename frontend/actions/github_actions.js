@@ -4,14 +4,12 @@ import * as GithubApi from '../api/github_api';
 
 export const RECEIVE_COMMITS = "RECEIVE_COMMITS";
 
-const NUM_COMMITS = 4;
-
 const receiveCommits = commits => ({
     type: RECEIVE_COMMITS,
     commits
 });
 
-export const fetchCommits = () => dispatch => {
+export const fetchCommits = num => dispatch => {
     let lastEvent = {};
 
     GithubApi.fetchEvents()
@@ -21,7 +19,7 @@ export const fetchCommits = () => dispatch => {
 
             return GithubApi.fetchCommits(repo);
         }).then(commits => {
-            let lastCommits = latestCommits(commits, NUM_COMMITS);
+            let lastCommits = latestCommits(commits, num);
             dispatch(receiveCommits(commitInfo(lastCommits)));
         });
 };

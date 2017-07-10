@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchCommits: () => dispatch(fetchCommits())
+    fetchCommits: num => dispatch(fetchCommits(num))
 });
 
 export default connect(
