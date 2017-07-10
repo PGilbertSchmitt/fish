@@ -1,6 +1,7 @@
 $column-width-left: 350px;
 $column-width-right: 550px;
-$column-height: 600px;
+$column-height: 640px;
+$commits-height: 320px;
 $item-spacing: 20px;
 
 
@@ -55,7 +56,7 @@ section.section {
             margin-bottom: $item-spacing;
             background-color: $grey;
             box-sizing: border-box;
-            height: calc((100% - #{$item-spacing}) / 2);
+            height: calc(#{$column-height} - #{$item-spacing} - #{$commits-height});
             border-top-right-radius: 20px;
             padding: 20px;
         }
@@ -63,7 +64,7 @@ section.section {
         .portal-bottom {
             background-color: $grey;
             box-sizing: border-box;
-            height: calc((100% - #{$item-spacing}) / 2);
+            height: $commits-height;
             border-bottom-right-radius: 20px;
             padding: 20px;
         }
