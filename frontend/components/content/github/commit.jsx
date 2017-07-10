@@ -1,10 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 
-const sinceToday = date => (
-    moment(date).fromNow()
-);
-
 const Commit = ({ commit: { message, merge, date, sha, url } }) => {
     let cssClasses = "gh-icon ";
     cssClasses += merge ? "gh-merge" : "gh-commit";
