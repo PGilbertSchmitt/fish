@@ -20,6 +20,7 @@ export const fetchCommits = num => dispatch => {
             return GithubApi.fetchCommits(repo);
         }).then(commits => {
             let lastCommits = latestCommits(commits, num);
+            console.log(lastCommits);
             dispatch(receiveCommits(commitInfo(lastCommits)));
         });
 };
@@ -47,7 +48,8 @@ const commitInfo = commits => (
         return {
             message: message,
             merge: Boolean(branch),
-            date: commit.commit.author.date
+            date: commit.commit.author.date,
+            sha: _.take(commit.sha, 7)
         }
     })
 );
