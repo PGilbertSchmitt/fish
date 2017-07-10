@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import WakatimeStatistics from '../content/wakatime/wakatime_container';
+import GithubStatistics from '../content/github/github_container';
 
 const image_link = "https://i.imgbox.com/8ybfLGVD.gif";
 
@@ -12,7 +13,7 @@ const Home = (props) => (
 
             <div className="about">
                 <p>
-                    23 years young software developer. I like to make computers beep for fun.
+                    Software developer slash croissant enthusiast. I like to make computers beep for fun (and occasionally profit).
                 </p>
                 <p>
                     <i className="fa fa-phone fa-fw"></i>&nbsp;&nbsp;561.319.2333
@@ -32,7 +33,7 @@ const Home = (props) => (
                 <WakatimeStatistics />
             </div>
             <div className="portal-bottom">
-                one tiem i ate a friSBEE
+                <GithubStatistics />
             </div>
         </div>
     </section>

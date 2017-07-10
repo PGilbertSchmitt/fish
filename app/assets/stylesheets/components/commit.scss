@@ -1,0 +1,19 @@
+.gh-item {
+    .gh-icon {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+
+    .gh-merge {
+        background-image: asset-url("git-merge.svg");
+        background-size: 13px 15px;
+        background-repeat: no-repeat;
+    }
+
+    .gh-commit {
+        background-image: asset-url("git-commit.svg");
+        background-size: 13px 15px;
+        background-repeat: no-repeat;
+    }
+}

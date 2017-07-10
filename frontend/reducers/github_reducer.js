@@ -1,6 +1,6 @@
 import { RECEIVE_COMMITS } from '../actions/github_actions';
 
-const commitReducer = (state = {}, action) => {
+const commitReducer = (state = [], action) => {
     Object.freeze(state);
 
     switch (action.type) {
