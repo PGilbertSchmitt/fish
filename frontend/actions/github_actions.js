@@ -48,7 +48,8 @@ const commitInfo = commits => (
 
         return {
             message: message,
-            merge: Boolean(branch)
+            merge: Boolean(branch),
+            date: commit.commit.author.date
         }
     })
 );
