@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Commit from './commit';
 
-const NUM_COMMITS = 6;
+const NUM_COMMITS = 4;
 
 class GithubStatistics extends Component {
     constructor(props) {
