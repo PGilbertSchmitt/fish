@@ -29,7 +29,7 @@ const Home = (props) => (
         </div>
 
         <div className="portal">
-            <div className="portal-top">
+            <div className="portal-top" id="portal-top">
                 <WakatimeStatistics />
             </div>
             <div className="portal-bottom">
