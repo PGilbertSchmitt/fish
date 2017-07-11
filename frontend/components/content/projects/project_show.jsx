@@ -24,7 +24,7 @@ class ProjectShow extends Component {
                         <br />
                         <a href={project.live_url} className="external-link"><i className="fa fa-external-link-square fa-fw"></i>&nbsp;&nbsp;Live page</a>
                     </p>
-                    <img className="" src={imgSrc(project.header_img_path)} />
+                    <img className="header-img" src={imgSrc(project.header_img_path)} />
                     <div className="project-target" dangerouslySetInnerHTML={{ __html: project.html }}></div>
                 </div>
             );

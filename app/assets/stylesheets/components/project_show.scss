@@ -1,10 +1,23 @@
 .project-page {
-    width: 750px;
+    width: 800px;
     margin: 0 auto;
-    margin-top: 90px;
+    padding: 100px 70px 100px 70px;;
+    background-color: white;
     font-family: $sans-serif;
+    font-size: 1.2em;
 
     h1, h2, h3, h4, h5, h6 {
         font-family: $sans-bold;
+    }
+
+    img {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        display: block;
+        max-width: 700px;
+    }
+
+    .header-img {
+        height: auto;
     }
 }
