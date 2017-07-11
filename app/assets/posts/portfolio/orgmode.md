@@ -1,25 +1,19 @@
-** About
-VS Code Org Mode is an extension for Visual Studio Code inspired by the venerable [[http://orgmode.org/][Org mode for Emacs]]. Org lets you keep notes, maintain TODO lists, and author documents, all in plain text.
+## Org(anization) Mode
+VS Code Org Mode is an extension for Visual Studio Code inspired by the venerable [Org mode for Emacs](http://orgmode.org/). Org lets you keep notes, maintain TODO lists, and author documents, all in plain text.
 
-This wiki is meant to document the functionality provided by the extension. In designing the extension, the intention was to stick as close as possible to the original functionality and phraseology of Emacs Org mode. In keeping with that decision, these docs follow a similar structure to [[http://orgmode.org/manual/index.html][the Org Manual]] and borrow some descriptions.
+## Concept
+My good buddy Jason Reeder, a prominent Emacs and Org mode user in our circle, was the one who conceived of this project. Being comfortable with Visual Studio Code and wanting to extend it myself, I was more than excited to work on this project. While the extension isn't completed, it contains enough functionality to be useful. It currently has over a thousand downloads from the VS Marketplace, which makes it the largest project I've contributed to so far. It appears the reach of Org mode is much further than I thought.
 
-For each action in VS Code Org Mode, we provide the title, the command, and the key. The *title* is the human readable text used to access the action from the command palette. The *command* is the name of the TypeScript function used in defining custom keyboard shortcuts. The *key* is the default keybinding for invoking the action.
+## What it can do
+There's no point describing it in detail here if Jason's already done a [bang up job](https://jsonreeder.github.io/vscode-org-mode/) of that already.
 
-For specifics, see the pages listed to the right (=-->=).
+## What I did
+I had two major contributions to this project.
 
-The Extension is available on the [[https://marketplace.visualstudio.com/items?itemName=tootone.org-mode][VS Code Marketplace]].
-** Installation
-Org Mode can be installed in a number of ways:
-  - Launch VS Code Quick Open (=⌘+P= or =^+P=) and type ~ext install org-mode~.
-  - Search for =org mode= in the =Extensions= view in VS Code.
-** Activation
-After installation, the extension can be activated in two ways:
-1. Save a file with the extension =.org=. 
-2. Change the language mode to =Org= by either
-    - Clicking in the lower right corner to the left of the smiley face and selecting =Org=.
-    - Typing =change language mode= into the command palette.
-    - Using the default shortcut
-        - Linux / Windows: =^+k m=
-        - Mac: =⌘+k m=
-** Feedback
-VS Code Org Mode is an open-source project. We welcome contributions and feature requests. See the [[https://github.com/jsonreeder/vscode-org-mode][repo]] for contribution guidelines.
+### Getting off the ground
+The first was getting started in the first place. With none of us having any experience making extensions for anything, we had nothing to go on. While I do think the Visual Studio docs are helpful, there's a lot of information that's either left out or really difficult to find for one reason or another. I discovered Yeoman which can scaffold a VSCode extension, as well as using the `vsce` tool to publish the extension to the store. There was a lot of trial and error, much of which was spent directly in the project's `package.json` file, where a lot of initial configuration and triggers are set.
+
+### Date-Time
+The second contribution was directly involved with the code: Dates. One really cool feature of Org mode is the ability to create a date-time string wrapped in brackets, and if it's formatted correctly, it gets its own syntax highlighting. But that's not the cool part. Using a single action (or keystroke), the date-time text under the cursor can be incremented or decremented by a single day and keeps track of the proper weekday. While one idea floating around was to allow the section of date-time under the cursor to be specifically what is modified, it wouldn't be exactly what the Org mode spec specifies.
+
+I'm very proud of this project. It was my first work done in TypeScript, my first extension, my first successful group endeavor, and is actually used by other people. This sucked up a week of my life, and to watch it being used by hundreds of nerds around the world makes my heart sing.
