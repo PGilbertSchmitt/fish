@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   # Converts the raw markdown text into html
   def convert(md_str)
         renderer = Redcarpet::Render::HTML.new(render_options = {})
-        converter = Redcarpet::Markdown.new(renderer, extensions = {})
+        converter = Redcarpet::Markdown.new(renderer, extensions = { autolink: true })
         return converter.render(md_str)
     end
 end
