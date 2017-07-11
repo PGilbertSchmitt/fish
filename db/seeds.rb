@@ -30,16 +30,16 @@ Project.create!([
         stack:              "TypeScript",
         thumbnail_path:     "Uy0lyzDm",
         header_img_path:    "MNFGoNyB"
-    },
-    {
-        title:              "Project Ember",
-        desc:               "Interactive community experience by SF-based artist Jason Rasmussen",
-        post_url:           "ember.md",
-        github_url:         "PGilbertSchmitt/Ember-v3-Prototype",
-        live_url:           "http://overzero.org/",
-        slug:               "project-ember",
-        stack:              "C++, Arduino",
-        thumbnail_path:     "DxhI0UY3",
-        header_img_path:    "CNFMvp5F"
     }
+    # {
+    #     title:              "Project Ember",
+    #     desc:               "Interactive community experience by SF-based artist Jason Rasmussen",
+    #     post_url:           "ember.md",
+    #     github_url:         "PGilbertSchmitt/Ember-v3-Prototype",
+    #     live_url:           "http://overzero.org/",
+    #     slug:               "project-ember",
+    #     stack:              "C++, Arduino",
+    #     thumbnail_path:     "DxhI0UY3",
+    #     header_img_path:    "CNFMvp5F"
+    # }
 ])
