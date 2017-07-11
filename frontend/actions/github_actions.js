@@ -20,7 +20,6 @@ export const fetchCommits = num => dispatch => {
             return GithubApi.fetchCommits(repo);
         }).then(commits => {
             let lastCommits = latestCommits(commits, num);
-            console.log(lastCommits);
             dispatch(receiveCommits(commitInfo(lastCommits)));
         });
 };
@@ -54,5 +53,3 @@ const commitInfo = commits => (
         }
     })
 );
-
-window.fetchCommit = fetchCommits;

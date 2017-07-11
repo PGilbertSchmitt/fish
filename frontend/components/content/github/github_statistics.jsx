@@ -11,7 +11,6 @@ class GithubStatistics extends Component {
 
     componentDidMount() {
         this.props.fetchCommits(NUM_COMMITS);
-        console.log(this.props);
     }
 
     renderCommits(commits) {

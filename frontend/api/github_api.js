@@ -28,12 +28,3 @@ export const fetchCommits = (repo) => {
     return fetch(url, options)
         .then(res => (res.json()));
 }
-
-// Just to make sure I don't go over limit
-window.ghlimit = () => {
-    return fetch("https://api.github.com/rate_limit")
-        .then(res => (res.json()))
-        .then(data => { console.log(data) });
-}
-
-window.fetchEvents = fetchEvents;
