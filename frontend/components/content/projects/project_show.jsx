@@ -21,7 +21,6 @@ class ProjectShow extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        // console.log(nextProps);
         let slug = this.props.match.params.slug;
         this.fetchProject(slug, nextProps);
     }
@@ -45,7 +44,6 @@ class ProjectShow extends Component {
     render() {
         let data = this.state.data;
         let error = this.state.error;
-        // console.log(this.state);
 
         if (error) {
             return (

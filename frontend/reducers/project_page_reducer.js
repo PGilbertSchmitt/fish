@@ -4,7 +4,6 @@ import { RECEIVE_PROJECT } from '../actions/project_actions';
 
 const projectPageReducer = (state = [], action) => {
     Object.freeze(state);
-    console.log(action.project);
 
     switch (action.type) {
         case RECEIVE_PROJECT:
