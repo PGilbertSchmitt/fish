@@ -4,7 +4,7 @@ import ProjectShow from './project_show';
 import { getProject } from '../../../actions/project_actions';
 
 const mapStateToProps = state => ({
-    project: state.project
+    project_cache: state.project_cache
 });
 
 const mapDispatchToProps = dispatch => ({

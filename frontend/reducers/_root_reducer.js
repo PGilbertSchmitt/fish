@@ -7,7 +7,7 @@ import wakatimeReducer from './wakatime_reducer';
 
 export default combineReducers({
     projects: projectReducer,
-    project: projectPageReducer,
+    project_cache: projectPageReducer,
     commits: commitReducer,
     wakaActivity: wakatimeReducer
 });
