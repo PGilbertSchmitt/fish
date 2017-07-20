@@ -1,11 +1,19 @@
+import { unionBy } from 'lodash';
+
 import { RECEIVE_PROJECT } from '../actions/project_actions';
 
-const projectPageReducer = (state = {}, action) => {
+const projectPageReducer = (state = [], action) => {
     Object.freeze(state);
+    console.log(action.project);
 
     switch (action.type) {
         case RECEIVE_PROJECT:
-            return action.project;
+            let newProject = {
+                slug: action.project.slug,
+                data: action.project
+            };
+            let newState = unionBy(state, [newProject], "slug");
+            return newState;
         default:
             return state;
     }
