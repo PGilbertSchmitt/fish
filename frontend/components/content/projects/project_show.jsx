@@ -7,16 +7,15 @@ class ProjectShow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            project: null
+            data: null,
+            error: null
         };
+        this.fetchProject = this.fetchProject.bind(this);
     }
 
     componentDidMount() {
         let slug = this.props.match.params.slug;
-        let project = this.props.project_cache[slug];
-        if (project) {
-            this.setState({ project });
-        } else {
+        if (!this.fetchProject(slug, this.props)) {
             this.props.getProject(slug);
         }
     }
@@ -24,20 +23,35 @@ class ProjectShow extends Component {
     componentWillReceiveProps(nextProps) {
         // console.log(nextProps);
         let slug = this.props.match.params.slug;
-        let project = find(nextProps.project_cache, { slug });
-        // console.log(project);
+        this.fetchProject(slug, nextProps);
+    }
+
+    // Returns true and fetches if the project exists, or false if it needs to be fetched
+    fetchProject(slug, props) {
+        let project = find(props.project_cache, { slug });
         if (project) {
-            this.setState({ project });
-            // console.log("State set");
+            let data = project.data;
+            if (data.error) {
+                this.setState({ error: data.error });
+            } else {
+                this.setState({ data });
+            }
+            return true;
         }
+
+        return false;
     }
 
     render() {
-        let project = this.state.project;
+        let data = this.state.data;
+        let error = this.state.error;
         // console.log(this.state);
 
-        if (project) {
-            let data = project.data;
+        if (error) {
+            return (
+                <div className="no-project">{error}</div>
+            );
+        } else if (data) {
             return (
                 <div className="project-page">
                     <div className="title-bar">
@@ -57,7 +71,8 @@ class ProjectShow extends Component {
             );
         } else {
             return (
-                <div className="no-project">Could not find a project at portfolio/${this.props.match.params.slug}</div>
+                // Good place for a spinner
+                <div></div>
             );
         }
     }
