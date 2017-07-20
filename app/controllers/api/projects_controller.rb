@@ -6,7 +6,10 @@ class Api::ProjectsController < ApplicationController
     def show
         @project = Project.find_by slug: params[:slug]
         if @project.nil?
-            render json: {error: "No such project at url projects/#{params[:slug]}"}, status: 	:unprocessable_entity
+            render json: {
+                error: "No such project at url projects/#{params[:slug]}", 
+                slug: params[:slug]
+            }, status: 	:unprocessable_entity
         else
             post_suffix = "portfolio/#{@project.post_url}"
             post_path = "public/#{ActionController::Base.helpers.asset_path(post_suffix)}"
